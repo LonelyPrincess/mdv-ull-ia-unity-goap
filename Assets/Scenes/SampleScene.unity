@@ -518,10 +518,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5981584687702609641, guid: aec38d71706ba174f85fc02c845ff970, type: 3}
-      propertyPath: m_AgentTypeID
-      value: -1372625422
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aec38d71706ba174f85fc02c845ff970, type: 3}
 --- !u!4 &784447029 stripped
@@ -1265,10 +1261,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1467236595}
     m_Modifications:
-    - target: {fileID: 1439592063224376130, guid: fb824485790dd6643903f1d44f6ac0b6, type: 3}
-      propertyPath: m_WalkableMask
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 4814210981802105452, guid: fb824485790dd6643903f1d44f6ac0b6, type: 3}
       propertyPath: m_Name
       value: Healer
@@ -1521,10 +1513,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3819869694636273627, guid: 8689a4bd3d8b181479dbc8fbedd34b50, type: 3}
-      propertyPath: m_WalkableMask
-      value: 7
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8689a4bd3d8b181479dbc8fbedd34b50, type: 3}
 --- !u!1001 &5042405455763679711
@@ -1582,10 +1570,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5042405456261460224, guid: 134e8e918f07a4a4a9169aac5bbad044, type: 3}
-      propertyPath: m_AgentTypeID
-      value: -1372625422
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 134e8e918f07a4a4a9169aac5bbad044, type: 3}
 --- !u!1001 &5981584686863147644
@@ -1642,10 +1626,6 @@ PrefabInstance:
     - target: {fileID: 3407859930337805783, guid: f250610bfd1554046b3fb2ef7149c58a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5981584687702609641, guid: f250610bfd1554046b3fb2ef7149c58a, type: 3}
-      propertyPath: m_AgentTypeID
-      value: -1372625422
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f250610bfd1554046b3fb2ef7149c58a, type: 3}
@@ -1713,10 +1693,6 @@ PrefabInstance:
     - target: {fileID: 7493177395242688814, guid: 0c2893454bc51fd4295d7204c64a3b16, type: 3}
       propertyPath: m_Name
       value: Audience A
-      objectReference: {fileID: 0}
-    - target: {fileID: 8300346008817980593, guid: 0c2893454bc51fd4295d7204c64a3b16, type: 3}
-      propertyPath: m_WalkableMask
-      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c2893454bc51fd4295d7204c64a3b16, type: 3}
