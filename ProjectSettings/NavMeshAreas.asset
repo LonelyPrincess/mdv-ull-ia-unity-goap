@@ -12,11 +12,11 @@ NavMeshProjectSettings:
   - name: Jump
     cost: 2
   - name: Arena
-    cost: 1
-  - name: 
-    cost: 1
-  - name: 
-    cost: 1
+    cost: 5
+  - name: Bed
+    cost: 5
+  - name: Bench
+    cost: 3
   - name: 
     cost: 1
   - name: 
