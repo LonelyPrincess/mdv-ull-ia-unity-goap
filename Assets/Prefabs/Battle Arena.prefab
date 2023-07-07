@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &8069427604953096974
 Transform:
@@ -49,8 +49,8 @@ GameObject:
   m_Name: Area B
   m_TagString: Arena Slot B
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 8
+  m_NavMeshLayer: 3
+  m_StaticEditorFlags: 40
   m_IsActive: 1
 --- !u!4 &2877364096066204720
 Transform:
@@ -182,8 +182,8 @@ GameObject:
   m_Name: Area A
   m_TagString: Arena Slot A
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 8
+  m_NavMeshLayer: 3
+  m_StaticEditorFlags: 40
   m_IsActive: 1
 --- !u!4 &2877364096712417356
 Transform:
