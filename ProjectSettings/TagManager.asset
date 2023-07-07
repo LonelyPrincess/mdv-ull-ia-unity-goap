@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Seat
+  - Bed
+  - Arena Slot A
+  - Arena Slot B
   layers:
   - Default
   - TransparentFX
