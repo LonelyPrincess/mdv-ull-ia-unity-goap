@@ -52,3 +52,4 @@ Warriors play a major role in the coliseum, as they'll be the ones to actually e
 ### 🎨 Resources
 
 - [Newbie & Friends](https://assetstore.unity.com/packages/3d/characters/newbie-friends-208112)
+- [Mega Fantasy Props Pack](https://assetstore.unity.com/packages/3d/environments/fantasy/mega-fantasy-props-pack-87811)
