@@ -40,8 +40,6 @@ Warriors play a major role in the coliseum, as they'll be the ones to actually e
     - Reduce amount of free slots for team.
     - Set belief to ready to fight.
 
-
-
 ## Additional information
 
 ### 🖥️ Project specs
