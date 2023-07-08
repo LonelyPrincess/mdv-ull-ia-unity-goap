@@ -32,4 +32,9 @@ public class WorldResources
     {
         return resources;
     }
+
+    public Queue<GameObject> GetResourcesOfType (string resType)
+    {
+        return resources[resType];
+    }
 }
