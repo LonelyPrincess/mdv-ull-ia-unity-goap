@@ -1,13 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-public static class ResourceTypes {
-    public const string Bed = "Bed";
-    public const string Seat = "Seat";
-    public const string ArenaSlotA = "Arena Slot A";
-    public const string ArenaSlotB = "Arena Slot B";
-}
 
 public class InitWorldResources : MonoBehaviour
 {
@@ -34,14 +25,9 @@ public class InitWorldResources : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StoreResourcesOfTypeInScene(ResourceTypes.Bed, "freeBeds");        StoreResourcesOfTypeInScene(ResourceTypes.Seat, "freeSeats");
-        StoreResourcesOfTypeInScene(ResourceTypes.ArenaSlotA, "freeArenaSlotA");
-        StoreResourcesOfTypeInScene(ResourceTypes.ArenaSlotB, "freeArenaSlotB");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        StoreResourcesOfTypeInScene(ResourceTypes.Bed, WorldStateProps.AvailableBeds);
+        StoreResourcesOfTypeInScene(ResourceTypes.Seat, WorldStateProps.AvailableSeats);
+        StoreResourcesOfTypeInScene(ResourceTypes.ArenaSlotA, WorldStateProps.AvailableArenaSlotsA);
+        StoreResourcesOfTypeInScene(ResourceTypes.ArenaSlotB, WorldStateProps.AvailableArenaSlotsB);
     }
 }
