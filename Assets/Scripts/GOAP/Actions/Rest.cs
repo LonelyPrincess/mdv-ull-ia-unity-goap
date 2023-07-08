@@ -13,7 +13,7 @@ public class Rest : GAction
             return false;
         }
 
-        Debug.Log("Rest PrePerform: Booking bed " + target.name);
+        Debug.Log("Rest PrePerform: Booking bed " + target.GetInstanceID());
         GWorld.Instance.GetWorld().ModifyState(WorldStateProps.AvailableBeds, -1);
         inventory.AddItem(target);
         return true;
