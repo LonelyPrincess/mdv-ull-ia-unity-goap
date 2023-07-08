@@ -12,9 +12,13 @@ public class Assistant : GAgent
         SubGoal s1 = new SubGoal("carryDefeated", 1, false);
         goals.Add(s1, 5);
 
+        // Assistants need to remain at waiting zone while there are no KOed people
+        SubGoal s2 = new SubGoal("awaitCasualties", 1, false);
+        goals.Add(s2, 1);
+
         // All agents will attempt to be well rested to have enough stamina
-        SubGoal s2 = new SubGoal("rested", 1, false);
-        goals.Add(s2, 2);
+        SubGoal s3 = new SubGoal("rested", 1, false);
+        goals.Add(s3, 2);
         Invoke("GetTired", Random.Range(10, 20));
     }
 

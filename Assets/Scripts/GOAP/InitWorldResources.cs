@@ -29,5 +29,11 @@ public class InitWorldResources : MonoBehaviour
         StoreResourcesOfTypeInScene(ResourceTypes.Seat, WorldStateProps.AvailableSeats);
         StoreResourcesOfTypeInScene(ResourceTypes.ArenaSlotA, WorldStateProps.AvailableArenaSlotsA);
         StoreResourcesOfTypeInScene(ResourceTypes.ArenaSlotB, WorldStateProps.AvailableArenaSlotsB);
+
+        // TODO: only for testing purposes, can be removed later
+        WorldResources resources = GWorld.Instance.GetSharedResources();
+        GameObject sampleWarrior = GameObject.Find("Warrior A");
+        resources.AddResource(WorldStateProps.DefeatedWarriorsInArena, sampleWarrior);
+        GWorld.Instance.GetWorld().ModifyState(WorldStateProps.DefeatedWarriorsInArena, 1);
     }
 }
