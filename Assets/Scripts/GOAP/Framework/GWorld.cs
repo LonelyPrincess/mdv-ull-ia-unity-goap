@@ -12,6 +12,9 @@ public sealed class GWorld
     {
         world = new WorldStates();
         resources = new WorldResources();
+
+        // Speed up the simulation
+        Time.timeScale = 5;
     }
 
     private GWorld()
