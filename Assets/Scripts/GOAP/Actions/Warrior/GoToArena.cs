@@ -19,6 +19,16 @@ public class GoToArena : GAction
         return true;
     }
 
+    public new bool IsAchievable () {
+       GameObject currentArenaSlot = inventory.FindItemWithTag("Arena Slot");
+        if (currentArenaSlot == null) {
+            Debug.Log("FIGHT: " + this.name + " is already in arena!");
+            return false;
+        }
+
+        return true;
+    }
+
     public override bool PostPerform()
     {
         GameObject currentArenaSlot = inventory.FindItemWithTag("Arena Slot");
