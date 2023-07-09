@@ -29,7 +29,7 @@ public class Fight : GAction
 
         Debug.Log("FIGHT: " + this.name + " is ready to fight with " + opponent.name);
         target = currentArenaSlot;
-        transform.LookAt(opponent.transform.position);
+        transform.LookAt(opponent.transform);
         Debug.Log("FIGHT: " + this.name + " should look at " + opponent.name);
 
         Animator anim = GetComponent<Animator>();
