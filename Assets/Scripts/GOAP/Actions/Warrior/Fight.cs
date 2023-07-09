@@ -21,7 +21,7 @@ public class Fight : GAction
         }
 
         Debug.Log("FIGHT: " + this.name + " is ready to fight with " + opponent.name);
-        target = opponent;
+        // target = opponent;
 
         /*WorldResources resources = GWorld.Instance.GetSharedResources();
         //.AddResource("fightersInArena" + arenaId, this.gameObject);
@@ -54,8 +54,9 @@ public class Fight : GAction
 
         bool isDeathlyBlow = Random.Range(0, 100) > 80;
         if (isDeathlyBlow) {
-            Debug.Log("FIGHT: " + this.name + " defeated " + opponent.name);
+            Debug.LogWarning("FIGHT: " + this.name + " defeated " + opponent.name);
             anim.SetBool("isAttacking", false);
+            beliefs.RemoveState("rested");
             beliefs.ModifyState("exhausted", 0);
             beliefs.ModifyState("winBattle", 1);
 
@@ -69,6 +70,7 @@ public class Fight : GAction
             GWorld.Instance.GetWorld().ModifyState("fightersInArena" + arenaId, -2);
 
             // KO opponent
+            opponent.GetComponent<GAgent>().beliefs.RemoveState("rested");
             opponent.GetComponent<GAgent>().beliefs.ModifyState("defeated", 0);
             resources.AddResource(WorldStateProps.DefeatedWarriorsInArena, opponent);
             GWorld.Instance.GetWorld().ModifyState(WorldStateProps.DefeatedWarriorsInArena, 1);
