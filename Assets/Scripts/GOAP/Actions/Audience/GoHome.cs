@@ -26,6 +26,7 @@ public class GoHome : GAction
 
     public override bool PostPerform()
     {
+        beliefs.RemoveState("sawFight");
         return true;
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -921,6 +921,11 @@ MonoBehaviour:
   numAgentsOnStart: 2
   agentPrefab: {fileID: 1451199645502026960, guid: 134e8e918f07a4a4a9169aac5bbad044, type: 3}
   keepSpawningRandomly: 0
+--- !u!1 &1242285269 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7493177395242688814, guid: 0c2893454bc51fd4295d7204c64a3b16, type: 3}
+  m_PrefabInstance: {fileID: 8300346007749280185}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1269232488
 GameObject:
   m_ObjectHideFlags: 0
@@ -2162,6 +2167,70 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5883465808536638269, guid: 0c2893454bc51fd4295d7204c64a3b16, type: 3}
   m_PrefabInstance: {fileID: 8300346007749280185}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2492324908252648073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242285269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 498aa51dd1a25f645867adcaeee57d2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: Go Home
+  cost: 1
+  target: {fileID: 0}
+  targetTag: Audience Exit
+  duration: 10
+  preConditions:
+  - key: isSeated
+    value: 0
+  - key: sawFight
+    value: 0
+  afterEffects:
+  - key: enjoyedFight
+    value: 0
+  agent: {fileID: 0}
+  running: 0
+--- !u!114 &2492324908252648074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242285269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b3007cd8a3dcae4c913d6c16a59338d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: Get Seat
+  cost: 1
+  target: {fileID: 0}
+  targetTag: 
+  duration: 0
+  preConditions: []
+  afterEffects:
+  - key: isSeated
+    value: 0
+  agent: {fileID: 0}
+  running: 0
+--- !u!114 &2492324908252648075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242285269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a120b915c304981478437f52fb646f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actions: []
+  currentAction: {fileID: 0}
 --- !u!1001 &2877364097730921899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2541,7 +2610,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7493177395242688814, guid: 0c2893454bc51fd4295d7204c64a3b16, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c2893454bc51fd4295d7204c64a3b16, type: 3}
