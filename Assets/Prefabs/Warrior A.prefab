@@ -242,6 +242,7 @@ GameObject:
   - component: {fileID: 784447037}
   - component: {fileID: 784447038}
   - component: {fileID: 784447039}
+  - component: {fileID: 547701771280037455}
   m_Layer: 0
   m_Name: Warrior A
   m_TagString: Warrior
@@ -446,6 +447,31 @@ MonoBehaviour:
     value: 0
   afterEffects:
   - key: fight
+    value: 0
+  agent: {fileID: 0}
+  running: 0
+--- !u!114 &547701771280037455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806083457911388100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54783ebc4f1bb004eb6d424293dd3de8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: Action
+  cost: 1
+  target: {fileID: 0}
+  targetTag: 
+  duration: 0
+  preConditions:
+  - key: exhausted
+    value: 0
+  afterEffects:
+  - key: rested
     value: 0
   agent: {fileID: 0}
   running: 0

@@ -26,27 +26,6 @@ public class Fight : GAction
         Animator anim = GetComponent<Animator>();
         anim.SetBool("isAttacking", true);
 
-        /*WorldResources resources = GWorld.Instance.GetSharedResources();
-        //.AddResource("fightersInArena" + arenaId, this.gameObject);
-        int arenaId = Mathf.Abs(currentArenaSlot.transform.parent.gameObject.GetInstanceID());
-        Queue<GameObject> fightersInArena = resources.GetResourcesOfType("fightersInArena" + arenaId);
-        if (fightersInArena.Count < 2) {
-            Debug.Log("Opponent is yet not ready to fight in arena " + arenaId);
-            return false;
-        }*/
-
-        // TODO: validate an opponent is available
-        // currentArenaSlot.GetComponentInParent();
-
-        /*target = GWorld.Instance.GetSharedResources().RemoveResource(ResourceTypes.ArenaSlot);
-        if (target == null) {
-            Debug.Log("A free arena slot could not be found!");
-            return false;
-        }
-
-        GWorld.Instance.GetWorld().ModifyState(WorldStateProps.AvailableArenaSlots, -1);
-        inventory.AddItem(target);*/
-
         InvokeRepeating("Attack", 0, 1);
         Invoke("CeaseAttack", this.duration);
 
