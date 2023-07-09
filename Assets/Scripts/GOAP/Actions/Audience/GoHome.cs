@@ -6,8 +6,10 @@ public class GoHome : GAction
 {
     public override bool PrePerform()
     {
-        Animator anim = GetComponent<Animator>();
-        anim.SetBool("isJumping", true);
+        /* if (beliefs.GetState("sawFight") == null) {
+            Debug.Log(this.name + " still hasn't seen a fight to the end, so cannot return home");
+            return false;
+        } */
 
         // Return bench to shared resources before going home
         GameObject bench = inventory.FindItemWithTag("Bench");

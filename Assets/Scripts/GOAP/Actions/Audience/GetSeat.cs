@@ -18,11 +18,14 @@ public class GetSeat : GAction
 
     public override bool PostPerform()
     {
-        Animator anim = GetComponent<Animator>();
-        anim.SetBool("isJumping", true);
-
-        int arenaId = Mathf.Abs(target.transform.parent.gameObject.transform.parent.gameObject.GetInstanceID());
+        GameObject arena = target.transform.parent.gameObject.transform.parent.gameObject;
+        int arenaId = Mathf.Abs(arena.GetInstanceID());
         GWorld.Instance.GetWorld().ModifyState("audienceInArena" + arenaId, 1);
+
+        /* Vector3 relativePos = arena.transform.GetChild(0).gameObject.transform.position - transform.position;
+        Quaternion rotation = Quaternion.LookRotation(relativePos, new Vector3(0,1,0));
+        transform.rotation = rotation * Quaternion.Euler(0, 90, 0); */
+
         return true;
     }
 }

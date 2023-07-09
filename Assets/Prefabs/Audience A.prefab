@@ -1779,7 +1779,9 @@ MonoBehaviour:
   target: {fileID: 0}
   targetTag: 
   duration: 0
-  preConditions: []
+  preConditions:
+  - key: freeSeats
+    value: 0
   afterEffects:
   - key: isSeated
     value: 0

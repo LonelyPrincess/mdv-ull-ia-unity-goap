@@ -101,7 +101,7 @@ public class Fight : GAction
         GWorld.Instance.GetWorld().ModifyState(WorldStateProps.AvailableArenaSlots, 1);
         GWorld.Instance.GetWorld().ModifyState("activeWarriorsInArena" + arenaId, -1);
 
-        // TODO:
+        // Make the audience feel satisfied after the end of the battle
         GameObject audience;
         while ((audience = resources.RemoveResource("audienceInArena" + arenaId)) != null) {
             audience.GetComponent<GAgent>().beliefs.ModifyState("sawFight", 0);
