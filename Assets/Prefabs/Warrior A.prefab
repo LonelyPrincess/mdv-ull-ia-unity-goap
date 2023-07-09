@@ -389,7 +389,9 @@ MonoBehaviour:
   target: {fileID: 0}
   targetTag: Warrior Training Area
   duration: 1
-  preConditions: []
+  preConditions:
+  - key: rested
+    value: 0
   afterEffects:
   - key: train
     value: 0
@@ -413,6 +415,8 @@ MonoBehaviour:
   targetTag: 
   duration: 0
   preConditions:
+  - key: rested
+    value: 0
   - key: freeArenaSlots
     value: 0
   afterEffects:

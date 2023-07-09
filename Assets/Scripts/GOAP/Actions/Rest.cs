@@ -9,11 +9,10 @@ public class Rest : GAction
     {
         target = GWorld.Instance.GetSharedResources().RemoveResource(ResourceTypes.Bed);
         if (target == null) {
-            Debug.Log("Rest PrePerform: A free bed could not be found!");
+            Debug.Log("A free bed could not be found!");
             return false;
         }
 
-        Debug.Log("Rest PrePerform: Booking bed " + target.GetInstanceID());
         GWorld.Instance.GetWorld().ModifyState(WorldStateProps.AvailableBeds, -1);
         inventory.AddItem(target);
         return true;
@@ -21,7 +20,6 @@ public class Rest : GAction
 
     public override bool PostPerform()
     {
-        Debug.Log("Rest PostPerform");
         beliefs.RemoveState("exhausted");
 
         // Return bed to shared resources after usage

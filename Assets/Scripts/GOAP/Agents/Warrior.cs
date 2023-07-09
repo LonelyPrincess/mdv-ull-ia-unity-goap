@@ -8,6 +8,9 @@ public class Warrior : GAgent
     {
         base.Start();
 
+        // Warriors must have stamina from the start
+        beliefs.ModifyState("rested", 0);
+
         // Warriors main goal is to fight
         SubGoal s1 = new SubGoal("fight", 1, false);
         goals.Add(s1, 5);

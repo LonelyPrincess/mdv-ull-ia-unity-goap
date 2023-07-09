@@ -57,6 +57,7 @@ public class Fight : GAction
             Debug.Log("FIGHT: " + this.name + " defeated " + opponent.name);
             anim.SetBool("isAttacking", false);
             beliefs.ModifyState("exhausted", 0);
+            beliefs.ModifyState("winBattle", 1);
 
             WorldResources resources = GWorld.Instance.GetSharedResources();
 
@@ -64,6 +65,7 @@ public class Fight : GAction
             GameObject currentArenaSlot = inventory.FindItemWithTag("Arena Slot");
             int arenaId = Mathf.Abs(currentArenaSlot.transform.parent.gameObject.GetInstanceID());
             resources.AddResource(ResourceTypes.ArenaSlot, currentArenaSlot);
+            GWorld.Instance.GetWorld().ModifyState(WorldStateProps.AvailableArenaSlots, 1);
             GWorld.Instance.GetWorld().ModifyState("fightersInArena" + arenaId, -2);
 
             // KO opponent
