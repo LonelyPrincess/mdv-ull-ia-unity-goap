@@ -12,6 +12,7 @@ TagManager:
   - Warrior
   - Arena
   - Healer Waiting Area
+  - Audience Exit
   layers:
   - Default
   - TransparentFX
