@@ -6,6 +6,13 @@ public class GoToArena : GAction
 {
     public override bool PrePerform()
     {
+        Debug.Log("FIGHT: " + this.name + " is running action " + this.actionName);
+        GameObject currentArenaSlot = inventory.FindItemWithTag("Arena Slot");
+        if (currentArenaSlot != null) {
+            Debug.Log("FIGHT: " + this.name + " is already in arena!");
+            return false;
+        }
+
         target = GWorld.Instance.GetSharedResources().RemoveResource(ResourceTypes.ArenaSlot);
         if (target == null) {
             Debug.Log("A free arena slot could not be found!");
@@ -19,19 +26,9 @@ public class GoToArena : GAction
         return true;
     }
 
-    public new bool IsAchievable () {
-       GameObject currentArenaSlot = inventory.FindItemWithTag("Arena Slot");
-        if (currentArenaSlot == null) {
-            Debug.Log("FIGHT: " + this.name + " is already in arena!");
-            return false;
-        }
-
-        return true;
-    }
-
     public override bool PostPerform()
     {
-        GameObject self = this.gameObject;
+        /* GameObject self = this.gameObject;
         GameObject currentArenaSlot = inventory.FindItemWithTag("Arena Slot");
         int arenaId = Mathf.Abs(currentArenaSlot.transform.parent.gameObject.GetInstanceID());
         Debug.Log("FIGHT: " + this.name + " is going to arena " + arenaId);
@@ -46,7 +43,7 @@ public class GoToArena : GAction
             Debug.Log("FIGHT: " + this.name + " had an opponent waiting in arena " + arenaId);
             inventory.AddItem(opponent);
             opponent.GetComponent<GAgent>().inventory.AddItem(self);
-        }
+        } */
         return true;
     }
 }

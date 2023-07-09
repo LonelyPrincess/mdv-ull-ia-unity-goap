@@ -29,6 +29,9 @@ public class InitWorldResources : MonoBehaviour
         StoreResourcesOfTypeInScene(ResourceTypes.Seat, WorldStateProps.AvailableSeats);
         StoreResourcesOfTypeInScene(ResourceTypes.ArenaSlot, WorldStateProps.AvailableArenaSlots);
 
+        StoreResourcesOfTypeInScene("Arena", "freeArena");
+        StoreResourcesOfTypeInScene("Warrior", "unmatchedWarriors");
+
         // TODO: only for testing purposes, can be removed later
         /*WorldResources resources = GWorld.Instance.GetSharedResources();
         GameObject sampleWarrior = GameObject.Find("Warrior A");

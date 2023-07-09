@@ -54,7 +54,7 @@ public class GPlanner
 
         if (!success)
         {
-            Debug.Log("NO PLAN");
+            // Debug.Log("NO PLAN");
             return null;
         }
 
@@ -108,9 +108,9 @@ public class GPlanner
                 Dictionary<string, int> currentState = new Dictionary<string, int>(parent.state);
                 foreach (KeyValuePair<string, int> eff in action.effects)
                 {
-                    if (!currentState.ContainsKey(eff.Key))  
+                    if (!currentState.ContainsKey(eff.Key))
                         currentState.Add(eff.Key, eff.Value);
-                    
+
                 }
 
                 Node node = new Node(parent, parent.cost + action.cost, currentState, action);

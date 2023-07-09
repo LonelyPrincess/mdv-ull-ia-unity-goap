@@ -7,6 +7,8 @@ public class Fight : GAction
     GameObject opponent;
     public override bool PrePerform()
     {
+        Debug.Log("FIGHT: " + this.name + " is running action " + this.actionName + beliefs.GetState("awaitOpponent") + beliefs.GetState("readyToFight"));
+
         GameObject currentArenaSlot = inventory.FindItemWithTag("Arena Slot");
         if (currentArenaSlot == null) {
             Debug.Log("FIGHT: An assigned arena slot could not be found!");
