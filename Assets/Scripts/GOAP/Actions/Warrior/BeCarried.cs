@@ -12,6 +12,12 @@ public class BeCarried : GAction
             return false;
         }
 
+        // Free arena slot in which the character was knocked out
+        WorldResources resources = GWorld.Instance.GetSharedResources();
+        GameObject currentArenaSlot = inventory.FindItemWithTag("Arena Slot");
+        resources.AddResource(ResourceTypes.ArenaSlot, currentArenaSlot);
+        GWorld.Instance.GetWorld().ModifyState(WorldStateProps.AvailableArenaSlots, 1);
+
         return true;
     }
 
