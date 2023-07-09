@@ -2335,10 +2335,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Assistant
       objectReference: {fileID: 0}
-    - target: {fileID: 1451199645502026960, guid: 134e8e918f07a4a4a9169aac5bbad044, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2483994384627189443, guid: 134e8e918f07a4a4a9169aac5bbad044, type: 3}
       propertyPath: m_RootOrder
       value: 4
