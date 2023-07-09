@@ -99,7 +99,7 @@ public class Fight : GAction
         inventory.RemoveItem(currentArenaSlot);
         resources.AddResource(ResourceTypes.ArenaSlot, currentArenaSlot);
         GWorld.Instance.GetWorld().ModifyState(WorldStateProps.AvailableArenaSlots, 1);
-        GWorld.Instance.GetWorld().ModifyState("fightersInArena" + arenaId, -1);
+        GWorld.Instance.GetWorld().ModifyState("activeWarriorsInArena" + arenaId, -1);
 
         return true;
     }

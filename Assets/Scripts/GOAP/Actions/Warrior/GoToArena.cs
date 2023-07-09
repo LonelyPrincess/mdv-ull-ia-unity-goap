@@ -32,7 +32,7 @@ public class GoToArena : GAction
 
         GameObject currentArenaSlot = inventory.FindItemWithTag("Arena Slot");
         int arenaId = Mathf.Abs(currentArenaSlot.transform.parent.gameObject.GetInstanceID());
-        GWorld.Instance.GetWorld().ModifyState("fightersInArena" + arenaId, 1);
+        GWorld.Instance.GetWorld().ModifyState("activeWarriorsInArena" + arenaId, 1);
 
         return true;
     }
