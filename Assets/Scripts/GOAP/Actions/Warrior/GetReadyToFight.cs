@@ -7,13 +7,23 @@ public class GetReadyToFight : GAction
     public override bool PrePerform()
     {
         Debug.Log("FIGHT: " + this.name + " is running action " + this.actionName);
+        Debug.Log("FIGHT: " + this.name + " is waiting for opponent? " + (beliefs.GetState("awaitOpponent") != null));
+
+        /*string agentBeliefs = this.name + "beliefs: ";
+        foreach (KeyValuePair<string, int> kvp in beliefs.GetStates())
+        {
+            agentBeliefs += kvp.Key + " = " + kvp.Value + ", ";
+        }
+        Debug.Log("FIGHT: " + agentBeliefs);*/
+
+        GameObject currentArenaSlot = inventory.FindItemWithTag("Arena Slot");
+        target = currentArenaSlot;
 
         if (inventory.FindItemWithTag("Warrior") != null) {
             return true;
         }
 
         GameObject self = this.gameObject;
-        GameObject currentArenaSlot = inventory.FindItemWithTag("Arena Slot");
         int arenaId = Mathf.Abs(currentArenaSlot.transform.parent.gameObject.GetInstanceID());
 
         WorldResources resources = GWorld.Instance.GetSharedResources();
@@ -21,7 +31,6 @@ public class GetReadyToFight : GAction
         if (opponent == null || opponent == self) {
             Debug.Log("FIGHT: " + this.name + " still has no opponent in arena " + arenaId);
             resources.AddResource("fightersWaitingInArena" + arenaId, self);
-            // beliefs.ModifyState("awaitOpponent", 0);
             return false;
         }
 
@@ -35,6 +44,15 @@ public class GetReadyToFight : GAction
     public override bool PostPerform()
     {
         beliefs.RemoveState("awaitOpponent");
+        beliefs.ModifyState("readyToFight", 0);
+
+        string agentBeliefs = this.name + "beliefs after getting ready to fight for " + this.name + ": ";
+        foreach (KeyValuePair<string, int> kvp in beliefs.GetStates())
+        {
+            agentBeliefs += kvp.Key + " = " + kvp.Value + ", ";
+        }
+        Debug.Log(agentBeliefs);
+
         return true;
     }
 }

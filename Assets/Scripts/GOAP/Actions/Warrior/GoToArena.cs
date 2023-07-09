@@ -44,6 +44,7 @@ public class GoToArena : GAction
             inventory.AddItem(opponent);
             opponent.GetComponent<GAgent>().inventory.AddItem(self);
         } */
+        beliefs.ModifyState("awaitOpponent", 0);
         return true;
     }
 }

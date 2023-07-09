@@ -7,7 +7,13 @@ public class Fight : GAction
     GameObject opponent;
     public override bool PrePerform()
     {
-        Debug.Log("FIGHT: " + this.name + " is running action " + this.actionName + beliefs.GetState("awaitOpponent") + beliefs.GetState("readyToFight"));
+        Debug.Log("FIGHT: " + this.name + " is running action " + this.actionName);
+        string agentBeliefs = this.name + "beliefs before fight for " + this.name + ": ";
+        foreach (KeyValuePair<string, int> kvp in beliefs.GetStates())
+        {
+            agentBeliefs += kvp.Key + " = " + kvp.Value + ", ";
+        }
+        Debug.Log(agentBeliefs);
 
         GameObject currentArenaSlot = inventory.FindItemWithTag("Arena Slot");
         if (currentArenaSlot == null) {
@@ -47,10 +53,11 @@ public class Fight : GAction
             return;
         }
 
-        bool isDeathlyBlow = Random.Range(0, 100) > 80;
+        bool isDeathlyBlow = Random.Range(0, 100) > 90;
         if (isDeathlyBlow) {
             Debug.LogWarning("FIGHT: " + this.name + " defeated " + opponent.name);
             beliefs.ModifyState("winBattle", 1);
+            CeaseAttack();
 
             // Update status of opponent for them to know they've been defeated
             opponent.GetComponent<GAgent>().beliefs.ModifyState("defeated", 0);
@@ -67,7 +74,16 @@ public class Fight : GAction
         WorldResources resources = GWorld.Instance.GetSharedResources();
 
         beliefs.RemoveState("rested");
+        beliefs.RemoveState("readyToFight");
         inventory.RemoveItem(opponent);
+
+        string agentBeliefs = this.name + "beliefs after fight for " + this.name + ": ";
+        foreach (KeyValuePair<string, int> kvp in beliefs.GetStates())
+        {
+            agentBeliefs += kvp.Key + " = " + kvp.Value + ", ";
+        }
+
+        Debug.Log(agentBeliefs);
 
         // If battle was lost, add warrior to defeated pending to be picked up
         if (beliefs.GetState("defeated") != null) {
