@@ -22,12 +22,12 @@ public class Fight : GAction
         Debug.Log("FIGHT: " + this.name + " is ready to fight with " + opponent.name);
         target = currentArenaSlot;
         transform.LookAt(opponent.transform.position);
+        Debug.Log("FIGHT: " + this.name + " should look at " + opponent.name);
 
         Animator anim = GetComponent<Animator>();
         anim.SetBool("isAttacking", true);
 
         InvokeRepeating("Attack", 0, 1);
-        Invoke("CeaseAttack", this.duration);
 
         return true;
     }
@@ -59,7 +59,8 @@ public class Fight : GAction
 
     public override bool PostPerform()
     {
-        Debug.LogWarning("FIGHT: " + this.name + " has fought " + opponent.name);
+        Debug.LogWarning("FIGHT: " + this.name + " has finished fighting with " + opponent.name);
+        CeaseAttack();
 
         WorldResources resources = GWorld.Instance.GetSharedResources();
 
