@@ -42,8 +42,6 @@ public class Fight : GAction
 
     void CeaseAttack () {
         CancelInvoke("Attack");
-        Animator anim = GetComponent<Animator>();
-        anim.SetBool("isAttacking", false);
     }
 
     void Attack () {
@@ -69,7 +67,9 @@ public class Fight : GAction
     public override bool PostPerform()
     {
         Debug.LogWarning("FIGHT: " + this.name + " has finished fighting with " + opponent.name);
-        CeaseAttack();
+
+        Animator anim = GetComponent<Animator>();
+        anim.SetBool("isAttacking", false);
 
         WorldResources resources = GWorld.Instance.GetSharedResources();
 
