@@ -212,7 +212,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190355462}
   m_CullTransparentMesh: 1
---- !u!1001 &453500886
+--- !u!1001 &287726376
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -222,10 +222,6 @@ PrefabInstance:
     - target: {fileID: 1806083457911388100, guid: aec38d71706ba174f85fc02c845ff970, type: 3}
       propertyPath: m_Name
       value: Warrior A (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1806083457911388100, guid: aec38d71706ba174f85fc02c845ff970, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3407859930337805783, guid: aec38d71706ba174f85fc02c845ff970, type: 3}
       propertyPath: m_RootOrder
@@ -587,10 +583,6 @@ PrefabInstance:
     - target: {fileID: 1806083457911388100, guid: aec38d71706ba174f85fc02c845ff970, type: 3}
       propertyPath: m_Name
       value: Warrior A
-      objectReference: {fileID: 0}
-    - target: {fileID: 1806083457911388100, guid: aec38d71706ba174f85fc02c845ff970, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3407859930337805783, guid: aec38d71706ba174f85fc02c845ff970, type: 3}
       propertyPath: m_RootOrder
@@ -1311,7 +1303,7 @@ Transform:
   - {fileID: 2097248331482838486}
   - {fileID: 7458755589247463196}
   - {fileID: 784447029}
-  - {fileID: 1755356864}
+  - {fileID: 2052429731}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1482,11 +1474,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!4 &1755356864 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3407859930337805783, guid: aec38d71706ba174f85fc02c845ff970, type: 3}
-  m_PrefabInstance: {fileID: 453500886}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1808560532 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 680180403219569630, guid: ebb86f6396ab81a479bcd50cc5e8f3ad, type: 3}
@@ -1815,6 +1802,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   states: {fileID: 190355464}
+--- !u!4 &2052429731 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3407859930337805783, guid: aec38d71706ba174f85fc02c845ff970, type: 3}
+  m_PrefabInstance: {fileID: 287726376}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2107446189
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Fight : GAction
 {
     GameObject opponent;
+    bool isBattleLost = false;
 
     public override bool PrePerform()
     {
@@ -21,7 +22,11 @@ public class Fight : GAction
         }
 
         Debug.Log("FIGHT: " + this.name + " is ready to fight with " + opponent.name);
-        target = opponent;
+        target = currentArenaSlot;
+        transform.LookAt(opponent.transform.position);
+
+        Animator anim = GetComponent<Animator>();
+        anim.SetBool("isAttacking", true);
 
         /*WorldResources resources = GWorld.Instance.GetSharedResources();
         //.AddResource("fightersInArena" + arenaId, this.gameObject);
@@ -47,10 +52,19 @@ public class Fight : GAction
         return true;
     }
 
+    void Attack () {
+        if (beliefs.GetState("defeated") != null) {
+            Debug.LogWarning("FIGHT: " + this.name + " cannot fight anymore, they already lost to " + opponent.name);
+            return;
+        }
+
+        bool isDeathlyBlow = Random.Range(0, 100) > 80;
+    }
+
     public override bool PostPerform()
     {
         Animator anim = GetComponent<Animator>();
-        anim.SetBool("isAttacking", true);
+        anim.SetBool("isAttacking", false);
 
         Debug.LogWarning("FIGHT: " + this.name + " has fought " + opponent.name);
         bool isDeathlyBlow = Random.Range(0, 100) > 80;
