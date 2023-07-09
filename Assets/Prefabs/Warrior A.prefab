@@ -467,7 +467,7 @@ MonoBehaviour:
   cost: 1
   target: {fileID: 0}
   targetTag: 
-  duration: 0
+  duration: 10
   preConditions:
   - key: exhausted
     value: 0

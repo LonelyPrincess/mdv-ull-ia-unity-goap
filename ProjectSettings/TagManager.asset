@@ -11,6 +11,7 @@ TagManager:
   - Warrior Training Area
   - Warrior
   - Arena
+  - Healer Waiting Area
   layers:
   - Default
   - TransparentFX

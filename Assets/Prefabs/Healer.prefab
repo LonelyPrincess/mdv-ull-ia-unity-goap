@@ -1156,6 +1156,9 @@ GameObject:
   - component: {fileID: 1439592063224376131}
   - component: {fileID: 1439592063224376130}
   - component: {fileID: 1439592063224376143}
+  - component: {fileID: 7453087826770330557}
+  - component: {fileID: 7453087826770330558}
+  - component: {fileID: 7453087826770330559}
   m_Layer: 0
   m_Name: Healer
   m_TagString: Untagged
@@ -1247,6 +1250,68 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4208b7b5aa78ae44081ba5e679fc9183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7453087826770330557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4814210981802105452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c03deffbdf33aa742b065426d153712b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: Await Patients
+  cost: 1
+  target: {fileID: 0}
+  targetTag: Healer Waiting Area
+  duration: 2
+  preConditions: []
+  afterEffects:
+  - key: awaitPatients
+    value: 0
+  agent: {fileID: 0}
+  running: 0
+--- !u!114 &7453087826770330558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4814210981802105452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54783ebc4f1bb004eb6d424293dd3de8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: Rest
+  cost: 1
+  target: {fileID: 0}
+  targetTag: 
+  duration: 10
+  preConditions:
+  - key: exhausted
+    value: 0
+  afterEffects:
+  - key: rested
+    value: 0
+  agent: {fileID: 0}
+  running: 0
+--- !u!114 &7453087826770330559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4814210981802105452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8633535d95e175b45a83d21a441bfc2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actions: []
+  currentAction: {fileID: 0}
 --- !u!1 &4841693826604705276
 GameObject:
   m_ObjectHideFlags: 0
