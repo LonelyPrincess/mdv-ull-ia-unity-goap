@@ -95,7 +95,7 @@ public class Fight : GAction
         // If battle was won or ended up in draw, free arena slot
         beliefs.ModifyState("exhausted", 0);
         GameObject currentArenaSlot = inventory.FindItemWithTag("Arena Slot");
-        int arenaId = Mathf.Abs(currentArenaSlot.transform.parent.gameObject.GetInstanceID());
+        int arenaId = Mathf.Abs(currentArenaSlot.transform.parent.gameObject.transform.parent.gameObject.GetInstanceID());
         inventory.RemoveItem(currentArenaSlot);
         resources.AddResource(ResourceTypes.ArenaSlot, currentArenaSlot);
         GWorld.Instance.GetWorld().ModifyState(WorldStateProps.AvailableArenaSlots, 1);

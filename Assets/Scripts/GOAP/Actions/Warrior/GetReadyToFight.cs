@@ -24,7 +24,7 @@ public class GetReadyToFight : GAction
         }
 
         GameObject self = this.gameObject;
-        int arenaId = Mathf.Abs(currentArenaSlot.transform.parent.gameObject.GetInstanceID());
+        int arenaId = Mathf.Abs(currentArenaSlot.transform.parent.gameObject.transform.parent.gameObject.GetInstanceID());
 
         WorldResources resources = GWorld.Instance.GetSharedResources();
         GameObject opponent = resources.RemoveResource("fightersWaitingInArena" + arenaId);

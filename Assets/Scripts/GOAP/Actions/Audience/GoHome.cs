@@ -16,6 +16,9 @@ public class GoHome : GAction
             WorldResources resources = GWorld.Instance.GetSharedResources();
             resources.AddResource(ResourceTypes.Seat, bench);
             GWorld.Instance.GetWorld().ModifyState(WorldStateProps.AvailableSeats, +1);
+
+            int arenaId = Mathf.Abs(bench.transform.parent.gameObject.transform.parent.gameObject.GetInstanceID());
+            GWorld.Instance.GetWorld().ModifyState("audienceInArena" + arenaId, -1);
         }
 
         return true;

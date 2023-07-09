@@ -31,7 +31,7 @@ public class GoToArena : GAction
         beliefs.ModifyState("awaitOpponent", 0);
 
         GameObject currentArenaSlot = inventory.FindItemWithTag("Arena Slot");
-        int arenaId = Mathf.Abs(currentArenaSlot.transform.parent.gameObject.GetInstanceID());
+        int arenaId = Mathf.Abs(currentArenaSlot.transform.parent.gameObject.transform.parent.gameObject.GetInstanceID());
         GWorld.Instance.GetWorld().ModifyState("activeWarriorsInArena" + arenaId, 1);
 
         return true;
