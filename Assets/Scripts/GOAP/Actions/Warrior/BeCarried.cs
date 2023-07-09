@@ -6,7 +6,6 @@ public class BeCarried : GAction
 {
     public override bool PrePerform()
     {
-        Debug.Log("warrior be carried preperform");
         target = inventory.FindItemWithTag("Bed");
         if (target == null) {
             Debug.Log("An assigned bed could not be found!");

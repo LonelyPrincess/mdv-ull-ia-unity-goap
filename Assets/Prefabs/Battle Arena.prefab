@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 2877364096066204727}
   m_Layer: 0
   m_Name: Area B
-  m_TagString: Arena Slot B
+  m_TagString: Arena Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 3
   m_StaticEditorFlags: 40
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 2877364096712417347}
   m_Layer: 0
   m_Name: Area A
-  m_TagString: Arena Slot A
+  m_TagString: Arena Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 3
   m_StaticEditorFlags: 40

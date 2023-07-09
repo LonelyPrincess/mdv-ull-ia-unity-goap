@@ -27,8 +27,7 @@ public class InitWorldResources : MonoBehaviour
     {
         StoreResourcesOfTypeInScene(ResourceTypes.Bed, WorldStateProps.AvailableBeds);
         StoreResourcesOfTypeInScene(ResourceTypes.Seat, WorldStateProps.AvailableSeats);
-        StoreResourcesOfTypeInScene(ResourceTypes.ArenaSlotA, WorldStateProps.AvailableArenaSlotsA);
-        StoreResourcesOfTypeInScene(ResourceTypes.ArenaSlotB, WorldStateProps.AvailableArenaSlotsB);
+        StoreResourcesOfTypeInScene(ResourceTypes.ArenaSlot, WorldStateProps.AvailableArenaSlots);
 
         // TODO: only for testing purposes, can be removed later
         WorldResources resources = GWorld.Instance.GetSharedResources();

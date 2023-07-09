@@ -321,10 +321,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c03deffbdf33aa742b065426d153712b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionName: Action
+  actionName: Patrol
   cost: 1
   target: {fileID: 0}
-  targetTag: 
+  targetTag: Assistant Waiting Area
   duration: 2
   preConditions: []
   afterEffects:
@@ -344,7 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88af668269679c745a264de0f338a144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionName: Action
+  actionName: Carry Defeated
   cost: 1
   target: {fileID: 0}
   targetTag: 
@@ -369,7 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3d3ffe341e6a341bdb9f15893bbb77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionName: Action
+  actionName: Pickup Defeated
   cost: 1
   target: {fileID: 0}
   targetTag: 

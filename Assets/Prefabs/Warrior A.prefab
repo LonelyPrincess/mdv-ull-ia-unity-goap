@@ -239,6 +239,9 @@ GameObject:
   - component: {fileID: 5981584687702609641}
   - component: {fileID: 784447031}
   - component: {fileID: 784447032}
+  - component: {fileID: 784447037}
+  - component: {fileID: 784447038}
+  - component: {fileID: 784447039}
   m_Layer: 0
   m_Name: Warrior A
   m_TagString: Untagged
@@ -356,7 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fa055d3a50d467489bb5a863a2563ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionName: Action
+  actionName: Be Carried
   cost: 1
   target: {fileID: 0}
   targetTag: 
@@ -366,6 +369,79 @@ MonoBehaviour:
     value: 0
   afterEffects:
   - key: awaitTreatment
+    value: 0
+  agent: {fileID: 0}
+  running: 0
+--- !u!114 &784447037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806083457911388100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7da53f628371b234c81f75090dcde117, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: Train
+  cost: 1
+  target: {fileID: 0}
+  targetTag: Warrior Training Area
+  duration: 1
+  preConditions: []
+  afterEffects:
+  - key: train
+    value: 0
+  agent: {fileID: 0}
+  running: 0
+--- !u!114 &784447038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806083457911388100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bfeb001fcb4bd54984f15805c1fd870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: Go To Arena
+  cost: 1
+  target: {fileID: 0}
+  targetTag: 
+  duration: 0
+  preConditions:
+  - key: freeArenaSlots
+    value: 0
+  afterEffects:
+  - key: readyToFight
+    value: 0
+  agent: {fileID: 0}
+  running: 0
+--- !u!114 &784447039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806083457911388100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cb6114f19d08a4a902cfa4d269cdca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: Action
+  cost: 1
+  target: {fileID: 0}
+  targetTag: 
+  duration: 0
+  preConditions:
+  - key: readyToFight
+    value: 0
+  afterEffects:
+  - key: fight
     value: 0
   agent: {fileID: 0}
   running: 0

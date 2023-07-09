@@ -1,8 +1,7 @@
 public static class WorldStateProps {
     public const string AvailableBeds = "freeBeds";
     public const string AvailableSeats = "freeSeats";
-    public const string AvailableArenaSlotsA = "freeArenaSlotsA";
-    public const string AvailableArenaSlotsB = "freeArenaSlotsB";
+    public const string AvailableArenaSlots = "freeArenaSlots";
 
     // Indicates there's at least one warrior KOed in arena
     public const string DefeatedWarriorsInArena = "defeatedWarriorsInArena";

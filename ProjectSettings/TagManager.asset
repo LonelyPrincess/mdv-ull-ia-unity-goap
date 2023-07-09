@@ -6,8 +6,9 @@ TagManager:
   tags:
   - Seat
   - Bed
-  - Arena Slot A
-  - Arena Slot B
+  - Arena Slot
+  - Assistant Waiting Area
+  - Warrior Training Area
   layers:
   - Default
   - TransparentFX

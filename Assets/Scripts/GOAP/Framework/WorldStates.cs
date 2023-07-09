@@ -54,6 +54,13 @@ public class WorldStates
             states.Add(key, value);
     }
 
+    public int? GetState (string key)
+    {
+        if (states.ContainsKey(key))
+            return states[key];
+        return null;
+    }
+
     public Dictionary<string, int> GetStates()
     {
         return states;
