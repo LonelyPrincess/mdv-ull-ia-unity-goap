@@ -80,9 +80,6 @@ public class Fight : GAction
 
     public override bool PostPerform()
     {
-        Animator anim = GetComponent<Animator>();
-        anim.SetBool("isAttacking", false);
-
         Debug.LogWarning("FIGHT: " + this.name + " has fought " + opponent.name);
 
         WorldResources resources = GWorld.Instance.GetSharedResources();
@@ -101,6 +98,7 @@ public class Fight : GAction
         beliefs.ModifyState("exhausted", 0);
         GameObject currentArenaSlot = inventory.FindItemWithTag("Arena Slot");
         int arenaId = Mathf.Abs(currentArenaSlot.transform.parent.gameObject.GetInstanceID());
+        inventory.RemoveItem(currentArenaSlot);
         resources.AddResource(ResourceTypes.ArenaSlot, currentArenaSlot);
         GWorld.Instance.GetWorld().ModifyState(WorldStateProps.AvailableArenaSlots, 1);
         GWorld.Instance.GetWorld().ModifyState("fightersInArena" + arenaId, -1);
