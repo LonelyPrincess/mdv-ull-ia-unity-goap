@@ -29,7 +29,7 @@ public class PickupDefeated : GAction
     public override bool PostPerform()
     {
         beliefs.RemoveState("awaitCasualties");
-        // target.GetComponent<GAgent>().inventory.AddItem(bed);
+        target.GetComponent<GAgent>().inventory.AddItem(bed);
         GWorld.Instance.GetWorld().ModifyState(WorldStateProps.DefeatedWarriorsInArena, -1);
         return true;
     }

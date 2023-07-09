@@ -33,6 +33,7 @@ public class InitWorldResources : MonoBehaviour
         // TODO: only for testing purposes, can be removed later
         WorldResources resources = GWorld.Instance.GetSharedResources();
         GameObject sampleWarrior = GameObject.Find("Warrior A");
+        sampleWarrior.GetComponent<Warrior>().beliefs.ModifyState("defeated", 0);
         resources.AddResource(WorldStateProps.DefeatedWarriorsInArena, sampleWarrior);
         GWorld.Instance.GetWorld().ModifyState(WorldStateProps.DefeatedWarriorsInArena, 1);
     }

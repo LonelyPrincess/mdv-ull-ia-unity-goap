@@ -14,7 +14,7 @@ NavMeshProjectSettings:
   - name: Arena
     cost: 5
   - name: Bed
-    cost: 5
+    cost: 100
   - name: Bench
     cost: 3
   - name: 

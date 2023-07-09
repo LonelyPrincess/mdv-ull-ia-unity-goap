@@ -237,6 +237,8 @@ GameObject:
   - component: {fileID: 5981584687702609647}
   - component: {fileID: 5981584687702609640}
   - component: {fileID: 5981584687702609641}
+  - component: {fileID: 784447031}
+  - component: {fileID: 784447032}
   m_Layer: 0
   m_Name: Warrior A
   m_TagString: Untagged
@@ -328,6 +330,45 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &784447031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806083457911388100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 979bea3cd66f1944ebcd3a512eca632c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actions: []
+  currentAction: {fileID: 0}
+--- !u!114 &784447032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806083457911388100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa055d3a50d467489bb5a863a2563ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: Action
+  cost: 1
+  target: {fileID: 0}
+  targetTag: 
+  duration: 0
+  preConditions:
+  - key: defeated
+    value: 0
+  afterEffects:
+  - key: awaitTreatment
+    value: 0
+  agent: {fileID: 0}
+  running: 0
 --- !u!1 &1964653567024035742
 GameObject:
   m_ObjectHideFlags: 0
