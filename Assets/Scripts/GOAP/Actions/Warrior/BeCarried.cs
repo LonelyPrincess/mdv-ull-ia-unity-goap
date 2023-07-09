@@ -25,6 +25,8 @@ public class BeCarried : GAction
     public override bool PostPerform()
     {
         beliefs.RemoveState("defeated");
+        WorldResources resources = GWorld.Instance.GetSharedResources();
+        resources.AddResource(WorldStateProps.WarriorsAwaitingTreatment, this.gameObject);
         GWorld.Instance.GetWorld().ModifyState("warriorsAwaitingTreatment", 1);
         return true;
     }

@@ -1159,6 +1159,7 @@ GameObject:
   - component: {fileID: 7453087826770330557}
   - component: {fileID: 7453087826770330558}
   - component: {fileID: 7453087826770330559}
+  - component: {fileID: 5995917369313671691}
   m_Layer: 0
   m_Name: Healer
   m_TagString: Untagged
@@ -1312,6 +1313,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actions: []
   currentAction: {fileID: 0}
+--- !u!114 &5995917369313671691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4814210981802105452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b54b811b004539b4ba1192fc2e017db7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: Heal
+  cost: 1
+  target: {fileID: 0}
+  targetTag: 
+  duration: 2
+  preConditions:
+  - key: warriorsAwaitingTreatment
+    value: 0
+  afterEffects:
+  - key: healWarrior
+    value: 0
+  agent: {fileID: 0}
+  running: 0
 --- !u!1 &4841693826604705276
 GameObject:
   m_ObjectHideFlags: 0
