@@ -10,18 +10,18 @@ public class Fight : GAction
     {
         GameObject currentArenaSlot = inventory.FindItemWithTag("Arena Slot");
         if (currentArenaSlot == null) {
-            Debug.Log("An assigned arena slot could not be found!");
+            Debug.Log("FIGHT: An assigned arena slot could not be found!");
             return false;
         }
 
         opponent = inventory.FindItemWithTag("Warrior");
         if (opponent == null) {
-            Debug.Log("An opponent could not be found!");
+            Debug.Log("FIGHT: An opponent could not be found!");
             return false;
         }
 
         Debug.Log("FIGHT: " + this.name + " is ready to fight with " + opponent.name);
-        // target = opponent;
+        target = opponent;
 
         /*WorldResources resources = GWorld.Instance.GetSharedResources();
         //.AddResource("fightersInArena" + arenaId, this.gameObject);
@@ -52,6 +52,7 @@ public class Fight : GAction
         Animator anim = GetComponent<Animator>();
         anim.SetBool("isAttacking", true);
 
+        Debug.LogWarning("FIGHT: " + this.name + " has fought " + opponent.name);
         bool isDeathlyBlow = Random.Range(0, 100) > 80;
         if (isDeathlyBlow) {
             Debug.LogWarning("FIGHT: " + this.name + " defeated " + opponent.name);
