@@ -9,6 +9,7 @@ TagManager:
   - Arena Slot
   - Assistant Waiting Area
   - Warrior Training Area
+  - Warrior
   layers:
   - Default
   - TransparentFX

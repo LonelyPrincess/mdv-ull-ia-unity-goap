@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: 784447039}
   m_Layer: 0
   m_Name: Warrior A
-  m_TagString: Untagged
+  m_TagString: Warrior
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -432,7 +432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3cb6114f19d08a4a902cfa4d269cdca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionName: Action
+  actionName: Fight
   cost: 1
   target: {fileID: 0}
   targetTag: 
