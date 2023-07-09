@@ -65,4 +65,13 @@ public class WorldStates
     {
         return states;
     }
+
+    public new string ToString () {
+        string output = "";
+        foreach (KeyValuePair<string, int> kvp in states) {
+            output += kvp.Key + " = " + kvp.Value + ", ";
+        }
+
+        return output;
+    }
 }
