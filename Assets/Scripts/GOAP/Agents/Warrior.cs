@@ -23,7 +23,7 @@ public class Warrior : GAgent
         SubGoal s3 = new SubGoal("awaitTreatment", 1, false);
         goals.Add(s3, 3);
 
-        // All agents will attempt to be well rested to have enough stamina
+        // Warriors need to be well rested in order to fight
         SubGoal s4 = new SubGoal("rested", 1, false);
         goals.Add(s4, 3);
     }
