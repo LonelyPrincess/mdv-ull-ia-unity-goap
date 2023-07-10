@@ -1,12 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class GetHealed : GAction
 {
     public override bool PrePerform()
     {
-        target = inventory.FindItemWithTag(ResourceTypes.Bed);
+        target = inventory.FindItemWithTag(ResourceTags.Bed);
         if (target == null) {
             return false;
         }
@@ -20,8 +16,8 @@ public class GetHealed : GAction
 
         // Return bed to shared resources after usage
         inventory.RemoveItem(target);
-        GWorld.Instance.GetSharedResources().AddResource(ResourceTypes.Bed, target);
-        GWorld.Instance.GetWorld().ModifyState(WorldStateProps.AvailableBeds, 1);
+        GWorld.Instance.GetSharedResources().AddResource(ResourceTypes.AvailableBeds, target);
+        GWorld.Instance.GetWorld().ModifyState(ResourceTypes.AvailableBeds, 1);
 
         return true;
     }

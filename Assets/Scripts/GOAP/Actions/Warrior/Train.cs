@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Train : GAction
@@ -10,7 +8,6 @@ public class Train : GAction
             return false;
         }
 
-        Debug.Log("FIGHT: " + this.name + " is running action " + this.actionName + beliefs.GetState("awaitOpponent") + beliefs.GetState("readyToFight"));
         return true;
     }
 

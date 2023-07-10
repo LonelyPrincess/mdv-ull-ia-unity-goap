@@ -1,26 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GoToArena : GAction
 {
     public override bool PrePerform()
     {
-        Debug.Log("FIGHT: " + this.name + " is running action " + this.actionName);
-        GameObject currentArenaSlot = inventory.FindItemWithTag("Arena Slot");
+        GameObject currentArenaSlot = inventory.FindItemWithTag(ResourceTags.ArenaSlot);
         if (currentArenaSlot != null) {
-            Debug.Log("FIGHT: " + this.name + " is already in arena!");
+            Debug.Log(this.name + " is already in arena!");
             return false;
         }
 
-        target = GWorld.Instance.GetSharedResources().RemoveResource(ResourceTypes.ArenaSlot);
+        target = GWorld.Instance.GetSharedResources().RemoveResource(ResourceTypes.AvailableArenaSlots);
         if (target == null) {
             Debug.Log("A free arena slot could not be found!");
             return false;
         }
 
-        Debug.Log("FIGHT: " + this.name + " is going to arena slot " + target.GetInstanceID());
-        GWorld.Instance.GetWorld().ModifyState(WorldStateProps.AvailableArenaSlots, -1);
+        Debug.Log(this.name + " is going to arena slot " + target.GetInstanceID());
+        GWorld.Instance.GetWorld().ModifyState(ResourceTypes.AvailableArenaSlots, -1);
         inventory.AddItem(target);
 
         return true;
@@ -30,9 +27,9 @@ public class GoToArena : GAction
     {
         beliefs.ModifyState("awaitOpponent", 0);
 
-        GameObject currentArenaSlot = inventory.FindItemWithTag("Arena Slot");
+        GameObject currentArenaSlot = inventory.FindItemWithTag(ResourceTags.ArenaSlot);
         int arenaId = Mathf.Abs(currentArenaSlot.transform.parent.gameObject.transform.parent.gameObject.GetInstanceID());
-        GWorld.Instance.GetWorld().ModifyState("activeWarriorsInArena" + arenaId, 1);
+        GWorld.Instance.GetWorld().ModifyState(ResourceTypes.ActiveWarriorsInArena + arenaId, 1);
 
         return true;
     }

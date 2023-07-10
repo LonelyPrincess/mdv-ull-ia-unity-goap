@@ -1,13 +1,8 @@
-// carryDefeated
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class CarryDefeated : GAction
 {
     public override bool PrePerform()
     {
-        target = inventory.FindItemWithTag(ResourceTypes.Bed);
+        target = inventory.FindItemWithTag(ResourceTags.Bed);
         if (target == null)
             return false;
 
