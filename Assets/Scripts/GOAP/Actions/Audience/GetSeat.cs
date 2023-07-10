@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class GetSeat : GAction
 {
     public override bool PrePerform()
@@ -14,6 +16,9 @@ public class GetSeat : GAction
 
     public override bool PostPerform()
     {
+        int arenaId = Mathf.Abs(target.transform.parent.gameObject.transform.parent.gameObject.GetInstanceID());
+        GWorld.Instance.GetWorld().ModifyState(ResourceTypes.AudienceInArena + arenaId, 1);
+
         return true;
     }
 }
