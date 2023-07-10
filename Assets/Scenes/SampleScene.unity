@@ -694,7 +694,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &839342237
 Transform:
   m_ObjectHideFlags: 0
@@ -766,7 +766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numAgentsOnStart: 5
-  agentPrefab: {fileID: 1806083457911388100, guid: f250610bfd1554046b3fb2ef7149c58a, type: 3}
+  agentPrefab: {fileID: 1806083457911388100, guid: d3b9598ccf8afa2418274deeaca8d182, type: 3}
   keepSpawningRandomly: 0
 --- !u!1 &963194225
 GameObject:
@@ -1396,7 +1396,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1467236595
 Transform:
   m_ObjectHideFlags: 0
@@ -1573,7 +1573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2877364097352040093, guid: 4c9d2353366ba534db0ae63419412ccd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c9d2353366ba534db0ae63419412ccd, type: 3}
@@ -1876,7 +1876,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2877364097352040093, guid: 4c9d2353366ba534db0ae63419412ccd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2877364097352040093, guid: 4c9d2353366ba534db0ae63419412ccd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2345,7 +2345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2877364097352040093, guid: 4c9d2353366ba534db0ae63419412ccd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2877364097352040093, guid: 4c9d2353366ba534db0ae63419412ccd, type: 3}
       propertyPath: m_StaticEditorFlags
