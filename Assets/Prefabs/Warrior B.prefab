@@ -234,12 +234,19 @@ GameObject:
   m_Component:
   - component: {fileID: 3407859930337805783}
   - component: {fileID: 4738109294506289325}
-  - component: {fileID: 5981584687702609647}
   - component: {fileID: 5981584687702609640}
   - component: {fileID: 5981584687702609641}
+  - component: {fileID: 784447031}
+  - component: {fileID: 784447032}
+  - component: {fileID: 784447037}
+  - component: {fileID: 784447038}
+  - component: {fileID: 784447039}
+  - component: {fileID: 547701771280037455}
+  - component: {fileID: 3290606898245219066}
+  - component: {fileID: 1110582840809300393}
   m_Layer: 0
   m_Name: Warrior B
-  m_TagString: Untagged
+  m_TagString: Warrior
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -282,18 +289,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5981584687702609647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1806083457911388100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4208b7b5aa78ae44081ba5e679fc9183, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5981584687702609640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,6 +323,197 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &784447031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806083457911388100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 979bea3cd66f1944ebcd3a512eca632c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actions: []
+  currentAction: {fileID: 0}
+--- !u!114 &784447032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806083457911388100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa055d3a50d467489bb5a863a2563ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: Be Carried
+  cost: 1
+  target: {fileID: 0}
+  targetTag: 
+  duration: 0
+  preConditions:
+  - key: defeated
+    value: 0
+  afterEffects:
+  - key: awaitTreatment
+    value: 0
+  agent: {fileID: 0}
+  running: 0
+--- !u!114 &784447037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806083457911388100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7da53f628371b234c81f75090dcde117, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: Train
+  cost: 1
+  target: {fileID: 0}
+  targetTag: Warrior Training Area
+  duration: 1
+  preConditions:
+  - key: rested
+    value: 0
+  afterEffects:
+  - key: train
+    value: 0
+  agent: {fileID: 0}
+  running: 0
+--- !u!114 &784447038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806083457911388100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bfeb001fcb4bd54984f15805c1fd870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: Go To Arena
+  cost: 1
+  target: {fileID: 0}
+  targetTag: 
+  duration: 0
+  preConditions:
+  - key: rested
+    value: 0
+  - key: freeArenaSlots
+    value: 0
+  afterEffects:
+  - key: awaitOpponent
+    value: 0
+  agent: {fileID: 0}
+  running: 0
+--- !u!114 &784447039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806083457911388100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cb6114f19d08a4a902cfa4d269cdca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: Fight
+  cost: 1
+  target: {fileID: 0}
+  targetTag: 
+  duration: 10
+  preConditions:
+  - key: readyToFight
+    value: 0
+  afterEffects:
+  - key: fight
+    value: 0
+  agent: {fileID: 0}
+  running: 0
+--- !u!114 &547701771280037455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806083457911388100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54783ebc4f1bb004eb6d424293dd3de8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: Action
+  cost: 1
+  target: {fileID: 0}
+  targetTag: 
+  duration: 10
+  preConditions:
+  - key: exhausted
+    value: 0
+  afterEffects:
+  - key: rested
+    value: 0
+  agent: {fileID: 0}
+  running: 0
+--- !u!114 &3290606898245219066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806083457911388100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 141c74d7c5b85944eafabe6237fb37cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: Get Ready To Fight
+  cost: 1
+  target: {fileID: 0}
+  targetTag: 
+  duration: 0
+  preConditions:
+  - key: awaitOpponent
+    value: 0
+  afterEffects:
+  - key: readyToFight
+    value: 0
+  agent: {fileID: 0}
+  running: 0
+--- !u!114 &1110582840809300393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806083457911388100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b91aaac5cdf2aa4b8fc6196b4ba32f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: Action
+  cost: 1
+  target: {fileID: 0}
+  targetTag: 
+  duration: 0
+  preConditions:
+  - key: isRecovering
+    value: 0
+  afterEffects:
+  - key: rested
+    value: 0
+  agent: {fileID: 0}
+  running: 0
 --- !u!1 &1964653567024035742
 GameObject:
   m_ObjectHideFlags: 0

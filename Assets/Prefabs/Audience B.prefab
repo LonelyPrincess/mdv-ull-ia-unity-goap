@@ -267,8 +267,11 @@ GameObject:
   - component: {fileID: 2889071262004028056}
   - component: {fileID: 5085136553481506786}
   - component: {fileID: 3819869694636273627}
-  - component: {fileID: 3819869694636273622}
   - component: {fileID: 3819869694636273623}
+  - component: {fileID: -7601061526433619325}
+  - component: {fileID: 4986797954318958764}
+  - component: {fileID: 2114029072320535222}
+  - component: {fileID: 6415808378024446012}
   m_Layer: 0
   m_Name: Audience B
   m_TagString: Untagged
@@ -336,18 +339,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 7
   m_ObstacleAvoidanceType: 4
---- !u!114 &3819869694636273622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2180677738973417611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4208b7b5aa78ae44081ba5e679fc9183, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3819869694636273623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,6 +351,95 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c0516d8868105d41b470ddde5876839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-7601061526433619325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2180677738973417611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a120b915c304981478437f52fb646f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actions: []
+  currentAction: {fileID: 0}
+--- !u!114 &4986797954318958764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2180677738973417611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b3007cd8a3dcae4c913d6c16a59338d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: Action
+  cost: 1
+  target: {fileID: 0}
+  targetTag: 
+  duration: 0
+  preConditions:
+  - key: freeSeats
+    value: 0
+  afterEffects:
+  - key: isSeated
+    value: 0
+  agent: {fileID: 0}
+  running: 0
+--- !u!114 &2114029072320535222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2180677738973417611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b7641ddbc0a5a44bd23c33c2a9dc19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: Action
+  cost: 1
+  target: {fileID: 0}
+  targetTag: 
+  duration: 20
+  preConditions:
+  - key: isSeated
+    value: 0
+  afterEffects:
+  - key: enjoyedFight
+    value: 0
+  agent: {fileID: 0}
+  running: 0
+--- !u!114 &6415808378024446012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2180677738973417611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 498aa51dd1a25f645867adcaeee57d2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: Action
+  cost: 1
+  target: {fileID: 0}
+  targetTag: 
+  duration: 0
+  preConditions:
+  - key: enjoyedFight
+    value: 0
+  afterEffects:
+  - key: passTimeAtArena
+    value: 0
+  agent: {fileID: 0}
+  running: 0
 --- !u!1 &2287256151709724443
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,5 +15,9 @@ public class AnimateMovement : MonoBehaviour {
 	void Update () {
     bool isAgentStopped = agent.velocity.magnitude < 0.15f;
     anim.SetBool("isWalking", !isAgentStopped);
+
+    if (anim.GetBool("isAttacking") && !isAgentStopped) {
+        anim.SetBool("isAttacking", false);
+    }
 	}
 }
