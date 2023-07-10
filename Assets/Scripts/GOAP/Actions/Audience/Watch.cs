@@ -15,6 +15,9 @@ public class Watch : GAction
             .transform.GetChild(0).gameObject;
         transform.LookAt(arenaPlatform.transform);
 
+        // Update duration so the time spent looking at the arena is not the same for everyone
+        duration = Random.Range(5, 60);
+
         return true;
     }
 

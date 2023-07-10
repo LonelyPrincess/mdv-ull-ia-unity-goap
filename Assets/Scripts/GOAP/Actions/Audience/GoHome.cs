@@ -18,6 +18,9 @@ public class GoHome : GAction
             GWorld.Instance.GetWorld().ModifyState("audienceInArena" + arenaId, -1);
         }
 
+        // Update duration so the time they spend at home is not the same for everyone
+        duration = Random.Range(0, 60);
+
         return true;
     }
 
