@@ -6,13 +6,17 @@ Each individual agent can have a set of goals for different priorities, and a va
 
 The presented simulation was created for the subject _"Artificial Inteligence in Videogames"_ in the videogame development's degree of the University of La Laguna.
 
-## Simulation
+## 🏛 Simulation overview
 
-The presented simulation portrays a coliseum, in which warriors will queue
+The presented simulation portrays a battle arena, in which the primary focus is for **warriors** to fight with each other. As part of the staff, we will also encounter **assistants** and **healers**. The first group of people will be in charge of carrying the wounded, while the second will effectively tend to their wounds. Last, but not least, we have a fourth group which are the **audience**, people who pass by to enjoy the show for a while.
 
-:memo: TODO
+There are three main type of shared resources in this simulation, which are the different **arena slots**, the available **seats** on them and also the **beds** to rest. Availability or lack of this resources at a given time will have an impact in how the agents behave, as some actions will require usage of one of them.
 
-## Agents involved in the simulation
+The image below illustrates the result of this simulation, where we can see the different agent types interacting with each other and seeking their destinations.
+
+![Preview of the simulation](./Screenshots/simulation-preview.gif)
+
+## 🤖 Agents involved in the simulation
 
 For this simulation, we've defined 4 different types of agents, each one with their own motives and possible actions.
 
