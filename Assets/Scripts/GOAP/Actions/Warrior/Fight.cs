@@ -57,6 +57,7 @@ public class Fight : GAction
     public override bool PostPerform()
     {
         Debug.LogWarning(this.name + " has finished fighting with " + opponent.name);
+        CeaseAttack();
 
         Animator anim = GetComponent<Animator>();
         anim.SetBool("isAttacking", false);
