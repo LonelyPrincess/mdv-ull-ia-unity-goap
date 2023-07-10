@@ -101,10 +101,10 @@ public class Fight : GAction
         GWorld.Instance.GetWorld().ModifyState(WorldStateProps.AvailableArenaSlots, 1);
         GWorld.Instance.GetWorld().ModifyState("activeWarriorsInArena" + arenaId, -1);
 
-        // Make the audience feel satisfied after the end of the battle
+        // Increase counter of witnessed fights for audience currently in arena
         GameObject audience;
         while ((audience = resources.RemoveResource("audienceInArena" + arenaId)) != null) {
-            audience.GetComponent<GAgent>().beliefs.ModifyState("sawFight", 0);
+            audience.GetComponent<GAgent>().beliefs.ModifyState("witnessedFights", 1);
         };
 
         return true;
