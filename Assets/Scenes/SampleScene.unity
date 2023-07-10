@@ -514,7 +514,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: c2493b176566e25458e8da9a30dc5892, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 0a9c027aef5b0254197a15cda32f0967, type: 2}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1742,7 +1742,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1835712931
 Transform:
   m_ObjectHideFlags: 0
@@ -1868,7 +1868,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2877364097352040093, guid: 4c9d2353366ba534db0ae63419412ccd, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2877364097352040093, guid: 4c9d2353366ba534db0ae63419412ccd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2030,7 +2030,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2107446189}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 2}
+  m_LocalPosition: {x: 20, y: 0, z: 20}
   m_LocalScale: {x: 20, y: 1, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2171,6 +2171,10 @@ PrefabInstance:
     - target: {fileID: 4814210981802105452, guid: fb824485790dd6643903f1d44f6ac0b6, type: 3}
       propertyPath: m_Name
       value: Healer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814210981802105452, guid: fb824485790dd6643903f1d44f6ac0b6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8400579695129634943, guid: fb824485790dd6643903f1d44f6ac0b6, type: 3}
       propertyPath: m_RootOrder
@@ -2372,6 +2376,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audience B
       objectReference: {fileID: 0}
+    - target: {fileID: 2180677738973417611, guid: 8689a4bd3d8b181479dbc8fbedd34b50, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2889071262004028056, guid: 8689a4bd3d8b181479dbc8fbedd34b50, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2428,6 +2436,10 @@ PrefabInstance:
     - target: {fileID: 1451199645502026960, guid: 134e8e918f07a4a4a9169aac5bbad044, type: 3}
       propertyPath: m_Name
       value: Assistant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451199645502026960, guid: 134e8e918f07a4a4a9169aac5bbad044, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2483994384627189443, guid: 134e8e918f07a4a4a9169aac5bbad044, type: 3}
       propertyPath: m_RootOrder
@@ -2539,6 +2551,10 @@ PrefabInstance:
     - target: {fileID: 7493177395242688814, guid: 0c2893454bc51fd4295d7204c64a3b16, type: 3}
       propertyPath: m_Name
       value: Audience A
+      objectReference: {fileID: 0}
+    - target: {fileID: 7493177395242688814, guid: 0c2893454bc51fd4295d7204c64a3b16, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c2893454bc51fd4295d7204c64a3b16, type: 3}
