@@ -18,37 +18,60 @@ The image below illustrates the result of this simulation, where we can see the 
 
 ## 🤖 Agents involved in the simulation
 
-For this simulation, we've defined 4 different types of agents, each one with their own motives and possible actions.
+As stated above, there are 4 different types of agents involved in this simulation, each one with their own motives and possible actions.
 
-### Warrior
+In this section we'll go over all of them in more detail, listing their goals and the sequence of actions that need to take place in order to fulfil them.
 
-Warriors play a major role in the coliseum, as they'll be the ones to actually engage into fights to entertain the public. Warriors will be split into two different teams, and they'll aim to win as many battles as possible.
+### ⚔ Warrior
 
-#### Actions
+Warriors play a major role in the coliseum, as they'll be the ones to actually engage into fights to entertain the public.
 
-#### 1. Go to arena
+This is the list of their main goals, as well as the sequence of actions that have to transpire to reach them:
 
-- Pre-conditions:
-    - Free slot for team in arena.
-    - Health is full. (?)
-- After effects:
-    - Reduce amount of free slots for team.
-    - Set belief to awaiting opponent.
+#### 1. Fight
 
-#### 2. Await for opponent
+- **Pre-conditions**:
+    - Warrior is full of stamina
+    - There are free arena slots
 
-- Pre-conditions:
-    - Other warrior in same arena is awaiting opponent.
-- After effects:
-    - Set belief to ready to fight.
+- **Actions**:
+    1. Go to arena (move towards free arena slot)
+    2. Get ready to fight (wait for an opponent to show up)
+    3. Fight (deal damage during a specific time slot, the one who deals a deathly blow will win)
 
-#### 3. Fight
+![Preview of fight action sequence](./Screenshots/fight-flow-preview.gif)
 
-- Pre-conditions:
-    - Ready to fight.
-- After effects:
-    - Reduce amount of free slots for team.
-    - Set belief to ready to fight.
+#### 2. Train
+
+- **Pre-conditions**:
+    - Warrior is full of stamina
+
+- **Actions**:
+    1. Train (go to train spot and remain there)
+
+![Preview of train action sequence](./Screenshots/train-flow-preview.gif)
+
+#### 3. Recover stamina (A)
+
+- **Pre-conditions**:
+    - Warrior is exhausted
+    - There are free beds
+
+- **Actions**:
+    1. Rest (go to bed and spend a while there)
+
+![Preview of rest action sequence](./Screenshots/rest-flow-preview.gif)
+#### 3. Recover stamina (B)
+
+- **Pre-conditions**:
+    - Warrior is defeated
+    - Assistant picked up the warrior
+
+- **Actions**:
+    1. Be carried (follow the assistant to assigned bed)
+    2. Get healed (get treated by a healer)
+
+![Preview of recover action sequence](./Screenshots/recover-flow-preview.gif)
 
 ## Additional information
 
