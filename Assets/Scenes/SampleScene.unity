@@ -2507,22 +2507,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1467236595}
     m_Modifications:
-    - target: {fileID: 2492324908252648073, guid: 0c2893454bc51fd4295d7204c64a3b16, type: 3}
-      propertyPath: preConditions.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2492324908252648073, guid: 0c2893454bc51fd4295d7204c64a3b16, type: 3}
-      propertyPath: preConditions.Array.data[0].key
-      value: onSeat
-      objectReference: {fileID: 0}
-    - target: {fileID: 2492324908252648074, guid: 0c2893454bc51fd4295d7204c64a3b16, type: 3}
-      propertyPath: duration
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2492324908252648074, guid: 0c2893454bc51fd4295d7204c64a3b16, type: 3}
-      propertyPath: afterEffects.Array.data[0].key
-      value: onSeat
-      objectReference: {fileID: 0}
     - target: {fileID: 5883465808536638269, guid: 0c2893454bc51fd4295d7204c64a3b16, type: 3}
       propertyPath: m_RootOrder
       value: 0

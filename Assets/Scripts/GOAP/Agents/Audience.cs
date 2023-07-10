@@ -8,8 +8,8 @@ public class Audience : GAgent
     {
         base.Start();
 
-        // Audience will aim to enjoy the sight of some fights
-        SubGoal s1 = new SubGoal("enjoyedFight", 1, false);
+        // Audience will aim to enjoy the sight of some fights to pass time
+        SubGoal s1 = new SubGoal("passTimeAtArena", 1, false);
         goals.Add(s1, 1);
     }
 }
