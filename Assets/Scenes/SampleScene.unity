@@ -134,10 +134,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Warrior A (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 1806083457911388100, guid: aec38d71706ba174f85fc02c845ff970, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3407859930337805783, guid: aec38d71706ba174f85fc02c845ff970, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -447,7 +443,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 595702389}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 30}
+  m_LocalPosition: {x: 50, y: 0, z: -50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -623,10 +619,6 @@ PrefabInstance:
     - target: {fileID: 1806083457911388100, guid: aec38d71706ba174f85fc02c845ff970, type: 3}
       propertyPath: m_Name
       value: Warrior A
-      objectReference: {fileID: 0}
-    - target: {fileID: 1806083457911388100, guid: aec38d71706ba174f85fc02c845ff970, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3407859930337805783, guid: aec38d71706ba174f85fc02c845ff970, type: 3}
       propertyPath: m_RootOrder
@@ -844,8 +836,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.035043236, y: 0.8869865, z: -0.4553771, w: 0.06825481}
-  m_LocalPosition: {x: 9.01777, y: 8.841696, z: 8.252199}
+  m_LocalRotation: {x: 0.03539242, y: 0.9542551, z: -0.2690456, w: 0.12553473}
+  m_LocalPosition: {x: 20.864594, y: 11.242688, z: 32.051826}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2163,6 +2155,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 680180403480932184, guid: ebb86f6396ab81a479bcd50cc5e8f3ad, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebb86f6396ab81a479bcd50cc5e8f3ad, type: 3}
 --- !u!1001 &1439592062753221575
@@ -2175,10 +2171,6 @@ PrefabInstance:
     - target: {fileID: 4814210981802105452, guid: fb824485790dd6643903f1d44f6ac0b6, type: 3}
       propertyPath: m_Name
       value: Healer
-      objectReference: {fileID: 0}
-    - target: {fileID: 4814210981802105452, guid: fb824485790dd6643903f1d44f6ac0b6, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8400579695129634943, guid: fb824485790dd6643903f1d44f6ac0b6, type: 3}
       propertyPath: m_RootOrder
@@ -2380,10 +2372,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audience B
       objectReference: {fileID: 0}
-    - target: {fileID: 2180677738973417611, guid: 8689a4bd3d8b181479dbc8fbedd34b50, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2889071262004028056, guid: 8689a4bd3d8b181479dbc8fbedd34b50, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2440,10 +2428,6 @@ PrefabInstance:
     - target: {fileID: 1451199645502026960, guid: 134e8e918f07a4a4a9169aac5bbad044, type: 3}
       propertyPath: m_Name
       value: Assistant
-      objectReference: {fileID: 0}
-    - target: {fileID: 1451199645502026960, guid: 134e8e918f07a4a4a9169aac5bbad044, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2483994384627189443, guid: 134e8e918f07a4a4a9169aac5bbad044, type: 3}
       propertyPath: m_RootOrder
