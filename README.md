@@ -129,7 +129,21 @@ This is the list of their goals, as well as the sequence of actions that have to
 
 ### 🎭 Audience
 
-:memo: TODO
+Audience's only aim is to pass some time of the arena, and then return home.
+
+This is the list of their goals, as well as the sequence of actions that have to transpire to reach them:
+
+#### 1. Get entertained
+
+- **Pre-conditions**:
+    - There are available seats
+
+- **Actions**:
+    1. Get seat (go towards a free seat)
+    2. Watch (remain on the seat for a while looking at the arena)
+    3. Go home (return home after having watched for a while)
+
+![Preview of watch arena flow](./Screenshots/watch-flow-preview.gif)
 
 ## Additional information
 
