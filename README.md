@@ -73,6 +73,41 @@ This is the list of their main goals, as well as the sequence of actions that ha
 
 ![Preview of recover action sequence](./Screenshots/recover-flow-preview.gif)
 
+### 🚑 Assistant
+
+Assistants are part of the staff of the arena, and their aim is to guide the warriors that are defeated to a bed, where they can be taken care of.
+
+This is the list of their goals, as well as the sequence of actions that have to transpire to reach them:
+
+#### 1. Carry the wounded
+
+- **Pre-conditions**:
+    - There are free beds
+
+- **Actions**:
+    1. Patrol (wander around until a defeated warrior is on any area)
+    2. Pick up defeated (assign bed to the defeated and go towards him)
+    3. Carry defeated (guide wounded towards their bed)
+
+![Preview of carry the wounded action sequence](./Screenshots/carry-wounded-flow-preview.gif)
+
+#### 2. Recover stamina
+
+- **Pre-conditions**:
+    - Assistant is exhausted
+    - There are free beds
+
+- **Actions**:
+    1. Rest (go to bed and spend a while there)
+
+### 🏥 Healer
+
+:memo: TODO
+
+### 🎭 Audience
+
+:memo: TODO
+
 ## Additional information
 
 ### 🖥️ Project specs
