@@ -83,6 +83,7 @@ This is the list of their goals, as well as the sequence of actions that have to
 
 - **Pre-conditions**:
     - There are free beds
+    - There are defeated warriors
 
 - **Actions**:
     1. Patrol (wander around until a defeated warrior is on any area)
@@ -102,7 +103,29 @@ This is the list of their goals, as well as the sequence of actions that have to
 
 ### 🏥 Healer
 
-:memo: TODO
+Healers are responsible of healing warriors that have been defeated, so that they can return to battle again.
+
+This is the list of their goals, as well as the sequence of actions that have to transpire to reach them:
+
+#### 1. Heal the wounded
+
+- **Pre-conditions**:
+    - There are warriors awaiting to be healed
+
+- **Actions**:
+    1. Patrol (wander around until a defeated warrior is awaiting in bed)
+    2. Heal (go towards warrior and restore his health)
+
+![Preview of heal action sequence](./Screenshots/heal-flow-preview.gif)
+
+#### 2. Recover stamina
+
+- **Pre-conditions**:
+    - Assistant is exhausted
+    - There are free beds
+
+- **Actions**:
+    1. Rest (go to bed and spend a while there)
 
 ### 🎭 Audience
 
